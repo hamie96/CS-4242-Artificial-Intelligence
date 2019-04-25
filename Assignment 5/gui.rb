@@ -2,12 +2,19 @@ require 'ruby2d'
 
 set background: 'white'
 
-Circle.new(
-	x: 200, y:175,
-	radius: 150,
+x = 200
+circle1 = Circle.new(
+	x : x, y: 175,
+	radius: 30,
 	sectors: 32,
-	color: 'black',
+	color: 'blue',
 	z:10
-)	
+)
+update do
+circle1(x:x)	
+
+
+	x+=1
+end
 
 show
